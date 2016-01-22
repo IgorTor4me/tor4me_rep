@@ -8,7 +8,7 @@ using Tor4Me.Data.DTOs;
 
 
 
-namespace Tor4Me.services.Services //PIZDEZ PROVERKA
+namespace Tor4Me.services.Services //PIZDEZ PROVERKA / jorik
 {
     public class ExecuterService : IExecuterService
     {

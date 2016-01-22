@@ -328,8 +328,8 @@ namespace Tor4Me.WebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email,BusinessID=model.BusinessId     };
-            
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email,=model.BusinessId };
+
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)

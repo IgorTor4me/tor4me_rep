@@ -28,7 +28,7 @@ namespace Tor4Me.Data
         public int sexudf_integer4 { get; set; }
         public int sexudf_integer5 { get; set; }
     
-        public virtual executers executers { get; set; }
-        public virtual service service { get; set; }
+        public  executers executers { get; set; }
+        public  service service { get; set; }
     }
 }

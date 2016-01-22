@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Dropbox\Tor4Me\Andrey\Tor4Me\Tor4Me.Data\Tor.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Andrey\Dropbox\Tor4Me\Server\MsSql\Tor4Me\Tor4Me.Data\Tor.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

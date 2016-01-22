@@ -18,7 +18,6 @@ namespace Tor4Me.Data
         public DB_9EED4C_tor4meserverEntities()
             : base("name=DB_9EED4C_tor4meserverEntities")
         {
-        //    Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -30,7 +29,6 @@ namespace Tor4Me.Data
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<business> business { get; set; }
         public virtual DbSet<business_contract> business_contract { get; set; }
         public virtual DbSet<contract> contract { get; set; }
@@ -39,5 +37,6 @@ namespace Tor4Me.Data
         public virtual DbSet<orders> orders { get; set; }
         public virtual DbSet<service> service { get; set; }
         public virtual DbSet<service_executers> service_executers { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
     }
 }

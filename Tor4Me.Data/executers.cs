@@ -11,7 +11,6 @@ namespace Tor4Me.Data
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     
     public partial class executers
     {
@@ -20,50 +19,24 @@ namespace Tor4Me.Data
         {
             this.service_executers = new HashSet<service_executers>();
         }
+    
         public long exeid { get; set; }
         public long exebusid { get; set; }
-      //  [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
-        [DefaultValue("")]
         public string exename { get; set; }
-        [DefaultValue("")]
         public string exelastname { get; set; }
-        [DefaultValue("")]
         public string execalenar { get; set; }
-        [DefaultValue("")]
         public string exeudf_text1 { get; set; }
-        [DefaultValue("")]
         public string exeudf_text2 { get; set; }
-        [DefaultValue("")]
         public string exeudf_text3 { get; set; }
-        [DefaultValue("")]
         public string exeudf_text4 { get; set; }
         public string exeudf_text5 { get; set; }
-       
-    //    string exeudf_text5
-
-    //    {
-     //       get { return exeudf_text5; }
-     //       set { exeudf_text5 = value; }
-         //   get { return exeudf_text5; }
-        //    set { if (value == null) exeudf_text5 = ""; }
-       //     set { _myProperty = value; }
-            //set
-            //{
-            //  if (value==null)
-            //   {
-            //        exeudf_text5 = "";
-            //   }
-            //}
-      //  }
-        
         public int exeudf_integer1 { get; set; }
         public int exeudf_integer2 { get; set; }
         public int exeudf_integer3 { get; set; }
         public int exeudf_integer4 { get; set; }
         public int exeudf_integer5 { get; set; }
-        
     
-        public  business business { get; set; }
+        public virtual business business { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<service_executers> service_executers { get; set; }
     }

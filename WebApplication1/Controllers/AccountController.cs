@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using Tor4Me.WebApi.Models;
-using Tor4Me.WebApi.Providers;
-using Tor4Me.WebApi.Results;
+using WebApplication1.Models;
+using WebApplication1.Providers;
+using WebApplication1.Results;
 
-namespace Tor4Me.WebApi.Controllers
+namespace WebApplication1.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
@@ -63,7 +63,6 @@ namespace Tor4Me.WebApi.Controllers
                 Email = User.Identity.GetUserName(),
                 HasRegistered = externalLogin == null,
                 LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
-                
             };
         }
 
@@ -329,7 +328,7 @@ namespace Tor4Me.WebApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, BusinessID=model.BusinessId};
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -376,10 +375,9 @@ namespace Tor4Me.WebApi.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && _userManager != null)
+            if (disposing)
             {
-                _userManager.Dispose();
-                _userManager = null;
+                UserManager.Dispose();
             }
 
             base.Dispose(disposing);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,12 +12,14 @@ using Tor4Me.services.Services;
 
 namespace Tor4Me.WebApi.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/executers")]
     public class executersController : ApiController
     {
         private IExecuterService executerService = new ExecuterService();
 
         [Route("")]
+        
         public IEnumerable<executers> Get()
         {
             return executerService.GetExecuters();

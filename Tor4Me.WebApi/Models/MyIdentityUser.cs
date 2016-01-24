@@ -12,6 +12,6 @@ namespace Tor4Me.WebApi.Models
 {
     public class MyIdentityUser:IdentityUser
     {
-        public virtual string BusinessID { get; set; }
+        public virtual long BusinessID { get; set; }
     }
 }

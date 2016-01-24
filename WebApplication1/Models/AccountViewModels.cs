@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tor4Me.WebApi.Models
+namespace WebApplication1.Models
 {
     // Models returned by AccountController actions.
 
@@ -32,8 +32,6 @@ namespace Tor4Me.WebApi.Models
         public bool HasRegistered { get; set; }
 
         public string LoginProvider { get; set; }
-
-        public string BusinessID { get; set; }
     }
 
     public class UserLoginInfoViewModel

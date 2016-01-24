@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace Tor4Me.WebApi.Models
+namespace WebApplication1.Models
 {
     // Models used as parameters to AccountController actions.
 
@@ -48,11 +48,6 @@ namespace Tor4Me.WebApi.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Required]
-        [Display(Name = "Business Id")]
-        public long BusinessId { get; set; }
-
     }
 
     public class RegisterExternalBindingModel

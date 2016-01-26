@@ -32,8 +32,6 @@ namespace Tor4Me.WebApi.Models
         public bool HasRegistered { get; set; }
 
         public string LoginProvider { get; set; }
-
-        public string BusinessID { get; set; }
     }
 
     public class UserLoginInfoViewModel

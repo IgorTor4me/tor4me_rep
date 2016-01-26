@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using Tor4Me.WebApi.Providers;
 using Tor4Me.WebApi.Models;
+using Microsoft.Owin.Cors;
 
 namespace Tor4Me.WebApi
 {
@@ -22,6 +23,9 @@ namespace Tor4Me.WebApi
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
+          //  app.UseCors(CorsOptions.AllowAll);
+
+        //    app.UseOAuthAuthorizationServer(new OAuthAuthorizationServerOptions());
             // Configure the db context and user manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);

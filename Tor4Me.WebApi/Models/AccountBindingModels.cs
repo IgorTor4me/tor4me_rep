@@ -51,7 +51,7 @@ namespace Tor4Me.WebApi.Models
 
         [Required]
         [Display(Name = "Business Id")]
-        public long BusinessId { get; set; }
+        public string BusinessId { get; set; }
 
     }
 

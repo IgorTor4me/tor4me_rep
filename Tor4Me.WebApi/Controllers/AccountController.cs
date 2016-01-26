@@ -39,6 +39,7 @@ namespace Tor4Me.WebApi.Controllers
 
         public ApplicationUserManager UserManager
         {
+            
             get
             {
                 return _userManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
@@ -63,7 +64,6 @@ namespace Tor4Me.WebApi.Controllers
                 Email = User.Identity.GetUserName(),
                 HasRegistered = externalLogin == null,
                 LoginProvider = externalLogin != null ? externalLogin.LoginProvider : null
-                
             };
         }
 

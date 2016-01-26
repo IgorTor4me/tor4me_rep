@@ -29,6 +29,8 @@ namespace Tor4Me.WebApi.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+
+         //   context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });  //enable CORS for token
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
             ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
